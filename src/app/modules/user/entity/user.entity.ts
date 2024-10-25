@@ -1,5 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
-import { Department } from './department.entity';
+import { Department } from '../../department/entity/department.entity';
+import { UUID } from 'crypto';
+
 
 @Entity('users')
 export class User {
