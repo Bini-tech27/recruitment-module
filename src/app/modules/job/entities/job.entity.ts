@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from 'typeorm';
-import { HiringPlan } from '../../hiring_plan/entity/hiring_plan.entity';
-import { Applicant } from '../../applicant/entity/applicant.entity';
+import { HiringPlan } from '../../hiring_plan/entities/hiring_plan.entity';
+import { Applicant } from '../../applicant/entities/applicant.entity';
 
 @Entity('jobs')
 export class Job {
