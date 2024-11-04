@@ -3,6 +3,9 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
+import { BiniModule } from './bini/bini.module';
+import { UserModule } from './user/user.module';
+import { FirebaseModule } from './firebase/firebase.module';
 
 @Module({
   imports: [
@@ -17,7 +20,10 @@ import { ConfigModule } from '@nestjs/config';
       database:process.env.PG_DB,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
-    })
+    }),
+    BiniModule,
+    UserModule,
+    FirebaseModule
   ],
   controllers: [AppController],
   providers: [AppService],
